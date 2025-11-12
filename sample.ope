@@ -1,0 +1,424 @@
+### This ope created at 2025-11-11 04:13:31 HST 
+### template ope file for PFS operations
+### v2023-06-27:  created based on 2023 Apr run
+### v2024-02-23:  updated including new commands
+### v2024-03-05:  updated for ope file generation in SFA.py
+
+### The description which should be modified by PPP-Qplan-SFA are indicated.
+
+
+:Header
+
+OBSERVATION_FILE_NAME=2025-11-12.ope
+OBSERVATION_FILE_TYPE=OPE
+OBSERVATION_START_DATE=2025.11.12                     
+OBSERVATION_START_TIME=17:00:00
+OBSERVATION_END_DATE=2025.11.13                        
+OBSERVATION_END_TIME=06:00:00
+
+
+:Parameter
+
+## Common parameters (No need to touch)
+DEF_PFSENG=OBE_ID=PFS OBE_MODE=SPEC_ENG
+DEF_PFS=OBE_ID=PFS OBE_MODE=SPEC
+DEF_CMNTOOL=OBE_ID=COMMON OBE_MODE=TOOL
+DEF_CMNLAN=OBE_ID=COMMON OBE_MODE=LAUNCHER F_SELECT="P_Opt2"
+# pfsDesign path directory
+PFSDSGNDIR="runs/2025-11/pfs_designs"
+
+# Camera for calibration (Mar. 2025)
+CAMS=CAMERA="b1,r1,n1,b2,r2,n2,r3,b3,n3,b4,r4,n4"
+CAM_BR=CAMERA="b1,r1,b2,r2,r3,b3,b4,r4"
+
+## Objects                                            
+# [SSP_CO_Autumn_22h_38_v2] 223357.105 +030617.32
+# [SSP_CO_Autumn_22h_41_v1] 223620.517 +030617.32
+# [SSP_CO_Autumn_22h_42_v1] 224107.344 +030617.32
+# [SSP_CO_Autumn_22h_31_v2] 225041.001 +020411.75
+# [SSP_CO_Autumn_22h_34_v1] 225751.241 +020411.75
+# [SSP_CO_Autumn_23h_40_v1] 230501.482 +030617.32
+# [SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0000] 021824.342 -045432.52
+# [SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0002] 021824.342 -045432.52
+# [SSP_CO_Autumn_0h_34_v1] 004748.276 +020411.75
+# [SSP_CO_Autumn_0h_50_v2] 005235.105 +030617.32
+# [SSP_CO_Autumn_0h_38_v2] 005945.347 +020411.75
+# [SSP_CO_Autumn_1h_29_v1] 010655.587 +020411.75
+# [SSP_CO_Autumn_1h_40_v2] 011629.244 +030617.32
+# [SSP_CO_Autumn_1h_46_v1] 012826.311 +030617.32
+# [SSP_CO_Autumn_1h_45_v2] 014023.382 +030617.32
+# [SSP_CO_Autumn_1h_49_v1] 014246.794 +030617.32
+# [SSP_CO_Autumn_1h_48_v2] 015443.864 +030617.32
+# [SSP_CO_Autumn_2h_67_v1] 020154.104 +030617.32
+# [SSP_CO_Autumn_2h_30_v2] 023258.485 -030617.32
+
+SSP_CO_Autumn_22h_38_v2=OBJECT="SSP_CO_Autumn_22h_38_v2" RA=223357.105 DEC=+030617.32 EQUINOX=2000.0
+SSP_CO_Autumn_22h_41_v1=OBJECT="SSP_CO_Autumn_22h_41_v1" RA=223620.517 DEC=+030617.32 EQUINOX=2000.0
+SSP_CO_Autumn_22h_42_v1=OBJECT="SSP_CO_Autumn_22h_42_v1" RA=224107.344 DEC=+030617.32 EQUINOX=2000.0
+SSP_CO_Autumn_22h_31_v2=OBJECT="SSP_CO_Autumn_22h_31_v2" RA=225041.001 DEC=+020411.75 EQUINOX=2000.0
+SSP_CO_Autumn_22h_34_v1=OBJECT="SSP_CO_Autumn_22h_34_v1" RA=225751.241 DEC=+020411.75 EQUINOX=2000.0
+SSP_CO_Autumn_23h_40_v1=OBJECT="SSP_CO_Autumn_23h_40_v1" RA=230501.482 DEC=+030617.32 EQUINOX=2000.0
+SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0000=OBJECT="SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0000" RA=021824.342 DEC=-045432.52 EQUINOX=2000.0
+SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0002=OBJECT="SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0002" RA=021824.342 DEC=-045432.52 EQUINOX=2000.0
+SSP_CO_Autumn_0h_34_v1=OBJECT="SSP_CO_Autumn_0h_34_v1" RA=004748.276 DEC=+020411.75 EQUINOX=2000.0
+SSP_CO_Autumn_0h_50_v2=OBJECT="SSP_CO_Autumn_0h_50_v2" RA=005235.105 DEC=+030617.32 EQUINOX=2000.0
+SSP_CO_Autumn_0h_38_v2=OBJECT="SSP_CO_Autumn_0h_38_v2" RA=005945.347 DEC=+020411.75 EQUINOX=2000.0
+SSP_CO_Autumn_1h_29_v1=OBJECT="SSP_CO_Autumn_1h_29_v1" RA=010655.587 DEC=+020411.75 EQUINOX=2000.0
+SSP_CO_Autumn_1h_40_v2=OBJECT="SSP_CO_Autumn_1h_40_v2" RA=011629.244 DEC=+030617.32 EQUINOX=2000.0
+SSP_CO_Autumn_1h_46_v1=OBJECT="SSP_CO_Autumn_1h_46_v1" RA=012826.311 DEC=+030617.32 EQUINOX=2000.0
+SSP_CO_Autumn_1h_45_v2=OBJECT="SSP_CO_Autumn_1h_45_v2" RA=014023.382 DEC=+030617.32 EQUINOX=2000.0
+SSP_CO_Autumn_1h_49_v1=OBJECT="SSP_CO_Autumn_1h_49_v1" RA=014246.794 DEC=+030617.32 EQUINOX=2000.0
+SSP_CO_Autumn_1h_48_v2=OBJECT="SSP_CO_Autumn_1h_48_v2" RA=015443.864 DEC=+030617.32 EQUINOX=2000.0
+SSP_CO_Autumn_2h_67_v1=OBJECT="SSP_CO_Autumn_2h_67_v1" RA=020154.104 DEC=+030617.32 EQUINOX=2000.0
+SSP_CO_Autumn_2h_30_v2=OBJECT="SSP_CO_Autumn_2h_30_v2" RA=023258.485 DEC=-030617.32 EQUINOX=2000.0
+
+
+
+:Command
+
+#############################
+# Preparations & Pre-checks #
+#############################
+
+# 1. Start AG camera (see manual)
+
+# 2. Check and select the bucket for data storage
+
+# 3. Execute below EVERY NIGHT 
+PRECHECK $DEF_PFS CHK_HEX=YES CHK_ADC=YES CHK_MCS=YES CHK_SPS=YES CHK_AG=YES
+
+# 4. (If it is the first night of the PFS run,) execute below.
+PRECHECK2 $DEF_PFS CHK_GRA=YES CHK_COBRA=YES
+
+
+
+
+#############################
+### Focusing              ###
+#############################
+
+# 1. Prepare PFS_AG Plugin on Gen2/Guideview (see manual)
+
+# 2. Take one exposure with AG 
+PFS_TESTEXPOSURE $DEF_PFSENG CAM=AG MODE=OBJECT NFRAME=1 EXPTIME=3
+# TESTEXPOSURE $DEF_PFS... (TBD)
+
+# 3. Start PFS_Focus on Guideview and select suitable camera and stars for focusing
+
+# 4. Conduct focusing
+## 4-1. searching with wide range for 1st focusing in evening
+FOCUSAGPFS $DEF_PFS Z=3.2 DELTAZ=0.1 NSTEP=7 NFRAME=3 MODE=AGEXP EXPTIME=10
+
+## 4-2. searching with standard range
+FOCUSAGPFS $DEF_PFS Z=3.2 DELTAZ=0.05 NSTEP=7 NFRAME=3 MODE=AGEXP EXPTIME=10
+
+
+
+
+#############################
+### Science Exposure      ###
+#############################
+
+### SSP_CO_Autumn_22h_38_v2 ###
+### OBSTIME: 2025-11-12T18:50:46 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x69fc3d50b011869d" OBJECT="SSP_CO_Autumn_22h_38_v2" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_22h_38_v2" 
+
+
+### SSP_CO_Autumn_22h_41_v1 ###
+### OBSTIME: 2025-11-12T19:11:15 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x47e8b632979309e7" OBJECT="SSP_CO_Autumn_22h_41_v1" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_22h_41_v1" 
+
+
+### SSP_CO_Autumn_22h_42_v1 ###
+### OBSTIME: 2025-11-12T19:31:41 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x59293d2160d69f01" OBJECT="SSP_CO_Autumn_22h_42_v1" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_22h_42_v1" 
+
+
+### SSP_CO_Autumn_22h_31_v2 ###
+### OBSTIME: 2025-11-12T19:51:58 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x35f02b9784c8a052" OBJECT="SSP_CO_Autumn_22h_31_v2" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_22h_31_v2" 
+
+
+### SSP_CO_Autumn_22h_34_v1 ###
+### OBSTIME: 2025-11-12T20:12:17 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x442dee91412ceb45" OBJECT="SSP_CO_Autumn_22h_34_v1" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_22h_34_v1" 
+
+
+### SSP_CO_Autumn_23h_40_v1 ###
+### OBSTIME: 2025-11-12T20:32:38 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x574877dba1e2e7a5" OBJECT="SSP_CO_Autumn_23h_40_v1" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_23h_40_v1" 
+
+
+### SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0000 ###
+### OBSTIME: 2025-11-12T20:55:35 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x043007dbed794d61" OBJECT="SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0000" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=900.0 NFRAME=2 SEQ_NAME="SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0000" 
+
+
+### SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0002 ###
+### OBSTIME: 2025-11-12T21:35:58 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x08e68db44fe09e8a" OBJECT="SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0002" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=900.0 NFRAME=2 SEQ_NAME="SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0002" 
+
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x08e68db44fe09e8a" OBJECT="SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0002" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=900.0 NFRAME=2 SEQ_NAME="SSP_GE_XMMLSS_S25B_run0004_DEEP_obs0002" 
+
+
+### SSP_CO_Autumn_0h_34_v1 ###
+### OBSTIME: 2025-11-12T22:59:07 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x5b0e9195e3a25d6d" OBJECT="SSP_CO_Autumn_0h_34_v1" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_0h_34_v1" 
+
+
+### SSP_CO_Autumn_0h_50_v2 ###
+### OBSTIME: 2025-11-12T23:19:22 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x29c63d3456847751" OBJECT="SSP_CO_Autumn_0h_50_v2" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_0h_50_v2" 
+
+
+### SSP_CO_Autumn_0h_38_v2 ###
+### OBSTIME: 2025-11-12T23:39:28 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x5f9a6c6a66ebd760" OBJECT="SSP_CO_Autumn_0h_38_v2" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_0h_38_v2" 
+
+
+### SSP_CO_Autumn_1h_29_v1 ###
+### OBSTIME: 2025-11-12T23:59:35 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x561f79359f00b785" OBJECT="SSP_CO_Autumn_1h_29_v1" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_1h_29_v1" 
+
+
+### SSP_CO_Autumn_1h_40_v2 ###
+### OBSTIME: 2025-11-13T00:19:43 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x4afa5478f8e30473" OBJECT="SSP_CO_Autumn_1h_40_v2" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_1h_40_v2" 
+
+
+### SSP_CO_Autumn_1h_46_v1 ###
+### OBSTIME: 2025-11-13T00:39:46 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x283f79e5c0d715b7" OBJECT="SSP_CO_Autumn_1h_46_v1" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_1h_46_v1" 
+
+
+### SSP_CO_Autumn_1h_45_v2 ###
+### OBSTIME: 2025-11-13T00:59:50 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x052f47c5cd35e957" OBJECT="SSP_CO_Autumn_1h_45_v2" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_1h_45_v2" 
+
+
+### SSP_CO_Autumn_1h_49_v1 ###
+### OBSTIME: 2025-11-13T01:19:58 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x348fd6259e60b0fc" OBJECT="SSP_CO_Autumn_1h_49_v1" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_1h_49_v1" 
+
+
+### SSP_CO_Autumn_1h_48_v2 ###
+### OBSTIME: 2025-11-13T01:40:02 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x2197e6c55f29b009" OBJECT="SSP_CO_Autumn_1h_48_v2" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_1h_48_v2" 
+
+
+### SSP_CO_Autumn_2h_67_v1 ###
+### OBSTIME: 2025-11-13T02:00:07 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x3201dc0a4127b79f" OBJECT="SSP_CO_Autumn_2h_67_v1" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_2h_67_v1" 
+
+
+### SSP_CO_Autumn_2h_30_v2 ###
+### OBSTIME: 2025-11-13T02:20:26 ###
+
+# SETUPFIELD WITH cobra convergence
+SETUPFIELD $DEF_PFS DESIGN_ID="0x58528e6b5c724236" OBJECT="SSP_CO_Autumn_2h_30_v2" AG=ON COBRA=YES
+
+# Check Auto Guiding condition and start InRot correction Loop
+
+## Get spectrum
+GETOBJECT $DEF_PFS EXPTIME=450.0 NFRAME=2 SEQ_NAME="SSP_CO_Autumn_2h_30_v2" 
+
+
+
+
+
+
+#############################
+### Calibrations          ###
+#############################
+
+# Move Rotator to 0 deg with 'Free' from Launcher-[Telescope2]_tab
+
+# Move cobra to home (via launcher or following command) ensuring the Rotator is at 0 degrees
+HOMECOBRA $DEF_PFS
+
+###---------------------------------###
+### DetectorMap for LOW resoulution ###
+###---------------------------------###
+
+SETUP_ENG_GROUPID $DEF_PFSENG GROUP_NAME="detectorMap_lr"
+
+# Minimum required: For monitoring the detector map (if time permit)
+### Arc
+GETARC $DEF_PFS $CAMS NFRAME=2 HGCD=45 SEQ_COMMENT="brn arm"
+GETARC $DEF_PFS $CAMS NFRAME=2 NE=5 SEQ_COMMENT="brn arm"
+### Trace
+GETTRACE $DEF_PFS $CAMS EXPTIME=45 NFRAME=2 SEQ_NAME="Trace" SEQ_COMMENT="brn arm" 
+
+# Maximum required: For taking Detector map (Confirm the necessity with Instrument team)
+### Arc
+GETARC $DEF_PFS $CAMS NFRAME=3 AR=10   SEQ_COMMENT="brn arm"
+GETARC $DEF_PFS $CAMS NFRAME=3 XE=45   SEQ_COMMENT="brn arm"
+GETARC $DEF_PFS $CAMS NFRAME=3 NE=5    SEQ_COMMENT="brn arm"
+GETARC $DEF_PFS $CAMS NFRAME=3 KR=70   SEQ_COMMENT="brn arm"
+GETARC $DEF_PFS $CAMS NFRAME=3 HGCD=45 SEQ_COMMENT="brn arm"
+# Trace
+GETTRACE $DEF_PFS $CAMS EXPTIME=45 NFRAME=3 SEQ_NAME="Trace" SEQ_COMMENT="brn arm" 
+
+
+###---------------------------------###
+### Detector Map for MEDium resolution
+### No daily required
+###---------------------------------###
+
+# change resolution to MEDium if the current is LOW
+SETUPRES $DEF_PFS RESOLUTION=MED
+
+# move/check Cobra back home
+HOMECOBRA $DEF_PFS
+
+# detectorMap for MR
+SETUP_ENG_GROUPID $DEF_PFSENG GROUP_NAME="detectorMap_mr"
+
+# Maximum required: For taking Detector map (Confirm the necessity with Instrument team)
+### Arc
+GETARC $DEF_PFS  $CAM_BR NFRAME=3 AR=10  SEQ_COMMENT="bm arm"
+GETARC $DEF_PFS  $CAM_BR NFRAME=3 XE=45  SEQ_COMMENT="bm arm"
+GETARC $DEF_PFS  $CAM_BR NFRAME=3 NE=5   SEQ_COMMENT="bm arm"
+GETARC $DEF_PFS  $CAM_BR NFRAME=3 KR=45  SEQ_COMMENT="bm arm"
+
+# execute getTrace
+GETTRACE $DEF_PFS  $CAM_BR EXPTIME=45 NFRAME=3 SEQ_NAME="Trace" SEQ_COMMENT="bm arm"
+
+
+
+### Dark ###
+# as needed
+GETSPSDARK $DEF_PFS EXPTIME=300 NFRAME=30

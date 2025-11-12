@@ -1,0 +1,8 @@
+astropy==7.1.1
+astropy-iers-data==0.2025.11.10.0.38.31
+numpy==2.3.4
+packaging==25.0
+pillow==12.0.0
+pyerfa==2.0.1.5
+PyYAML==6.0.3
+ttkthemes==3.3.0
